@@ -1,5 +1,6 @@
 import React from 'react'
 import Delete from './components/Delete'
+import InputTouched from './components/InputTouched'
 import User from './components/User'
 import UseReducer from './components/UseReducer'
 
@@ -13,6 +14,9 @@ function App() {
       <br />
       <hr />
       <User />
+      <br />
+      <hr />
+      <InputTouched />
     </div>
   )
 }
