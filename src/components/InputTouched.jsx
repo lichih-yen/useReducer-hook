@@ -40,6 +40,7 @@ const InputTouched = () => {
           })
         }
       />
+      <div style={{ color: 'red', fontSize: '15px', padding: '5px' }}>{state.error ? `Fill required!` : ''}</div>
       <button onClick={() => dispatch({ type: 'reset' })} style={{ padding: '8px' }}>
         Reset
       </button>
