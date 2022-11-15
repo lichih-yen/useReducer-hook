@@ -12,7 +12,7 @@ const reducer = (state, action) => {
     // case 'email':
     //   return { ...state, email: action.payload }
 
-    // refactor the code:
+    // refactor the code to have only one action for all inputs:
     case 'textInput':
       return { ...state, [action.payload.key]: action.payload.value }
     default:
@@ -31,7 +31,7 @@ const User = () => {
         style={{ margin: '5px', padding: '5px' }}
         // onChange={(event) => dispatch({ type: 'username', payload: event.target.value })}
 
-        // refactor the codes => (key, value)
+        // refactor the codes => (key, value) (refactor the code to have only one action for all inputs)
         onChange={(event) => dispatch({ type: 'textInput', payload: { key: 'username', value: event.target.value } })}
       />
       <input
@@ -40,7 +40,7 @@ const User = () => {
         style={{ margin: '5px', padding: '5px' }}
         // onChange={(event) => dispatch({ type: email, paylaoad: event.target.value })}
 
-        // refactor the codes => (key, value)
+        // refactor the codes => (key, value) (refactor the code to have only one action for all inputs)
         onChange={(event) => dispatch({ type: 'textInput', payload: { key: 'email', value: event.target.value } })}
       />
     </div>
